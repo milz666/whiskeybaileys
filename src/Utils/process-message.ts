@@ -387,7 +387,7 @@ const processMessage = async (
 				const pairs = []
 				for (const { pn, latestLid, assignedLid } of pnToLidMappings) {
 					const lid = latestLid || assignedLid
-					pairs.push({ lid: `${lid}@lid`, pn: `${pn}@s.whatsapp.net` })
+					(pairs as any).push({ lid: `${lid}@lid`, pn: `${pn}@s.whatsapp.net` })
 				}
 
 				await signalRepository.lidMapping.storeLIDPNMappings(pairs)

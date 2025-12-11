@@ -233,7 +233,7 @@ export const makeCommunitiesSocket = (config: SocketConfig) => {
 			if (subGroupsNode) {
 				const groupNodes = getBinaryNodeChildren(subGroupsNode, 'group')
 				for (const groupNode of groupNodes) {
-					linkedGroupsData.push({
+					(linkedGroupsData as any).push({
 						id: groupNode.attrs.id ? jidEncode(groupNode.attrs.id, 'g.us') : undefined,
 						subject: groupNode.attrs.subject || '',
 						creation: groupNode.attrs.creation ? Number(groupNode.attrs.creation) : undefined,
