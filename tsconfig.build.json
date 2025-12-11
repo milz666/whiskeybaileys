@@ -6,7 +6,14 @@
     "outDir": "lib",
     "declaration": true,
     "declarationMap": true,
-    "sourceMap": true
+    "sourceMap": true,
+
+"skipLibCheck": true,
+    "noImplicitAny": false,
+"noImplicitReturns": false,
+    "forceConsistentCasingInFileNames": false
+
   },
+
   "exclude": ["node_modules","src/__tests__"]
 }

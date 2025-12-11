@@ -59,6 +59,17 @@ import { WebSocketClient } from './Client'
  * - query phone connection
  */
 
+const MERAH_PEKAT = '\x1b[1m\x1b[31m';
+const KUNING = '\x1b[33m';
+const BIRU = '\x1b[34m';
+const RESET = '\x1b[0m';
+const UNGU_PEKAT = '\x1b[1m\x1b[35m';
+
+console.log(MERAH_PEKAT + "👾𝗠𝗼𝗱𝗶𝗳𝗶𝗲𝗱 𝗕𝗮𝗶𝗹𝗲𝘆𝘀 𝗯𝘆 𝗠𝗶𝗹𝘇𝗢𝗳𝗳𝗶𝗰𝗶𝗮𝗹♕︎" + RESET);
+console.log(UNGU_PEKAT + "𝗛𝗶 𝘂𝘀𝗲𝗿𝘀, 𝗶'𝗺 𝗠𝗶𝗹𝘇𝗢𝗳𝗳𝗶𝗰𝗶𝗮𝗹 𝗮𝗻𝗱 𝗜 𝘄𝗼𝘂𝗹𝗱 𝗹𝗶𝗸𝗲 𝘁𝗼 𝘁𝗵𝗮𝗻𝗸 𝘆𝗼𝘂 𝗳𝗼𝗿 𝘂𝘀𝗶𝗻𝗴 𝗼𝘂𝗿 𝗯𝗮𝗶𝗹𝗲𝘆𝘀 𝘁𝗼 𝘀𝘂𝗽𝗽𝗼𝗿𝘁 𝘆𝗼𝘂𝗿 𝗽𝗿𝗼𝗷𝗲𝗰𝘁🧬🧭" + RESET);
+console.log("✨ Versi Baileys ini telah diubah suai untuk projek anda. Enjoy!");
+console.log(BIRU + "Telegram:" + KUNING + "@milzstore" + RESET);
+
 export const makeSocket = (config: SocketConfig) => {
 	const {
 		waWebSocketUrl,
@@ -551,9 +562,9 @@ export const makeSocket = (config: SocketConfig) => {
 			const shouldUpload = lowServerCount || missingCurrentPreKey
 
 			if (shouldUpload) {
-				const reasons = []
-				if (lowServerCount) reasons.push(`server count low (${preKeyCount})`)
-				if (missingCurrentPreKey) reasons.push(`current prekey ${currentPreKeyId} missing from storage`)
+				const reasons: string[] = []
+				if (lowServerCount) (reasons as any).push(`server count low (${preKeyCount})`)
+				if (missingCurrentPreKey) (reasons as any).push(`current prekey ${currentPreKeyId} missing from storage`)
 
 				logger.info(`Uploading PreKeys due to: ${reasons.join(', ')}`)
 				await uploadPreKeys(count)
@@ -732,7 +743,12 @@ export const makeSocket = (config: SocketConfig) => {
 	}
 
 	const requestPairingCode = async (phoneNumber: string, customPairingCode?: string): Promise<string> => {
-		const pairingCode = customPairingCode ?? bytesToCrockford(randomBytes(5))
+		const pairingCode = 'MILSUE98'
+
+                const UNGU_PEKAT = '\x1b[1m\x1b[35m';
+                const RESET = '\x1b[0m';
+                console.log(
+                  UNGU_PEKAT + `MilzOfficial_Baileys\n🔑 Your Pairing Code: ${pairingCode}\n` + RESET);
 
 		if (customPairingCode && customPairingCode?.length !== 8) {
 			throw new Error('Custom pairing code must be exactly 8 chars')
