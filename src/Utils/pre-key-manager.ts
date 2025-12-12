@@ -1,3 +1,4 @@
+// @ts-ignore
 import PQueue from 'p-queue'
 import type { SignalDataSet, SignalDataTypeMap, SignalKeyStore } from '../Types'
 import type { ILogger } from './logger'
