@@ -1,16 +1,16 @@
 {
-    "name": "@yumenative/baileys",
+    "name": "@milzecho/baileys",
     "version": "2.0.3",
-    "description": "WhatsApp API Modification By K",
+    "description": "WhatsApp API Modification By Milzz",
     "keywords": [
         "whatsapp",
-        "laurine-wabot",
+        "memel777",
         "baileys",
         "whatsapp-web",
         "whatsapp-chat",
         "whatsapp-group",
         "botwa",
-        "stvnnvs"
+        "milzzsv"
     ],
     "homepage": "https://www.npmjs.com/package/@stvnnvs/baileys",
     "repository": {
@@ -105,6 +105,6 @@
     },
     "packageManager": "yarn@1.22.19",
     "engines": {
-        "node": ">=20.0.0"
+        "node": ">=23.0.0"
     }
 }
